@@ -3,6 +3,7 @@ export function manageFriends(state, action){
     case "ADD_FRIEND":
       return {friends: [...state.friends, action.friend]};
     case "REMOVE_FRIEND":
+      let filtered = state.friends.filter(friend => friend == action.friend)
       return {friends: state.friends.}
     default:
       return state;
